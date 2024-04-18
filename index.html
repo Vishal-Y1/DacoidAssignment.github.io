@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body
+    style="background-color: black"
+    class="h-screen flex justify-center items-center"
+  >
+    <div
+      class="screeen overflow-hidden bg-[#FCFCFC] w-[375px] h-[812px] rounded-[10px]"
+    >
+      <div class="navbar">
+        <nav
+          class="text-sm px-5 w-inherit h-[44px] flex flex-row justify-between items-center font-semibold"
+        >
+          <div class="time">09:32</div>
+          <div class="left__status">
+            <span><i class="fa-solid fa-signal"></i></span>
+            <span><i class="fa-solid fa-wifi"></i></span>
+            <span><i class="fa-solid fa-battery-three-quarters"></i></span>
+          </div>
+        </nav>
+      </div>
+      <div id="test" class="first__page ">
+        <div class="skip w-[375px] p-[12px] flex justify-end">
+          <a href="signUp.html"><button class="text-[#9FB2FF] font-medium">Skip</button></a>
+        </div>
+        <main id="main__first">
+          <div          
+            class="banner w-[375px] h-[380px] flex justify-center items-center"
+          >
+            <img class="size-[282px]" src="image.png" alt="banner" />
+          </div>
+          <div class="content p-[10px] leading-[24.5px]">
+            <h3 class="text-xl font-semibold py-3">Track Your Goal</h3>
+            <p class="font-medium">
+              Don’t worry if you have trouble determining your goals, We can
+              help you determine your goals and track your goals
+            </p>
+          </div>
+        </main>
+        <div id="next" class="next w-[375px] px-[20px] my-[4.3rem] flex justify-end">
+          <button
+            class="bg-[#89A1FF] rounded-full size-[60px] font-bold text-3xl"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="second__page">
+        <div class="skip w-[375px] p-[12px] flex justify-end">
+          <button class="text-[#9FB2FF] font-medium">Skip</button>
+        </div>
+        <main id="main__first">
+          <div          
+            class="banner w-[375px] h-[380px] flex justify-center items-center"
+          >
+            <img class="size-[282px]" src="page-2_image.png" alt="banner" />
+          </div>
+          <div class="content p-[10px] leading-[24.5px]">
+            <h3 class="text-xl font-semibold py-3">Get Burn</h3>
+            <p class="font-medium">
+                Let’s keep burning to achieve your goals, it hurts only temporarily,
+                if you give up now you will be in pain forever
+            </p>
+          </div>
+        </main>
+        <div id="next" class="next w-[375px] px-[20px] my-[4.3rem] flex justify-end">
+          <a href="auth.html">
+          <button
+            class="bg-[#89A1FF] rounded-full size-[60px] font-bold text-3xl"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+        const test = document.getElementById("test");
+        const next = document.getElementById('next')
+
+        next.onclick = () => {
+            test.style.display = 'none';
+            console.log("clicked")
+        }
+    </script>
+  </body>
+</html>

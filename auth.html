@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+<div class="bg-black h-screen flex justify-center items-center">
+  <div
+  class="screeen bg-[#FCFCFC] w-[375px] h-[812px] rounded-[10px]"
+>
+  <div class="navbar">
+    <nav
+      class="text-sm px-5 w-inherit h-[44px] flex flex-row justify-between items-center font-semibold"
+    >
+      <div class="time">09:32</div>
+      <div class="left__status">
+        <span><i class="fa-solid fa-signal"></i></span>
+        <span><i class="fa-solid fa-wifi"></i></span>
+        <span><i class="fa-solid fa-battery-three-quarters"></i></span>
+      </div>
+    </nav>
+  </div>
+<div id="signup_page" class="">
+  <h2 class="m-6 text-xl font-semibold" >Create an account</h2>
+  <div class="main__container flex flex-col items-center gap-9 justify-center">
+      <form method="post" class="flex flex-col justify-center items-center gap-3">
+        <input class="w-[343px] h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="text" name="firstName" id="first_name" placeholder="First Name"  />
+        <input class="w-[343px] h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="text" name="lastName" id="last_name" placeholder="Last Name" />
+        <input class="w-[343px] h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="email" name="email" id="email" placeholder="Email" />
+        <input class="w-[343px] h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="password" name="password" id="password" placeholder="Password" />
+        <div class="checkbox mt-3 text-xs flex items-center ">
+            <input class="mr-2 size-[20px] text-center " type="checkbox" name="checkbox" id="checkbox" />
+            <label>By proceeding, I agree to all <a class="text-sky-500 underline underline-offset-1"  href="">T&C</a>  and <a class="text-sky-500 underline underline-offset-1" href="">Privacy Policy</a></label>
+        </div>
+
+        <a href="goal.html"
+        class="w-[343px] mb-2 text-center mt-40 p-[12px] rounded-xl text-white bg-gradient-to-l from-[#7B91FF] to-[#95BEFF]"><button
+          type="button">Create an Account</button></a>
+        <p>or</p>
+        <div class="option mt-3 flex w-full justify-center gap-7 ">
+            <img class="size-[44px] border-2 border-[#7F7F7F] p-1 rounded-md" src="googlepng.png" alt="">
+            <img class="size-[44px] border-2 border-[#7F7F7F] p-1 rounded-md" src="facebookpng.png" alt="">
+        </div>
+      </form>
+</div>
+      <p class="text-sm text-center mt-5">Already have an account? <button id="loginBtn" class="underline" >login</button></p>
+</div>
+<div id="login_page" class="login hidden">
+  <h2 class="m-6 text-xl font-semibold">Welcome Back</h2>
+  <div class="main__container flex flex-col  gap-9">
+    <form method="post" class="flex px-5 flex-col align-start gap-3">
+      <input class="w-full h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="email"
+        name="email" id="email" placeholder="Email" />
+      <input class="w-full h-[50px] rounded-xl bg-[#F1F1F1] p-4 text-xs font-semibold outline-0" type="password"
+        name="password" id="password" placeholder="Password" />
+
+
+      <p class="text-xs font-medium px-3 cursor-pointer underline text-[#7F7F7F]">Forgot your password?</p>
+
+      <a href="workout.html"
+        class="w-[343px] mb-2 text-center mt-72 p-[12px] rounded-xl text-white bg-gradient-to-l from-[#7B91FF] to-[#95BEFF]"><button
+          type="button">Sign In</button></a>
+      <p class="text-center">or</p>
+      <div class="option mt-3 flex w-full justify-center gap-7">
+        <img class="size-[44px] border-2 border-[#7F7F7F] p-1 rounded-md" src="googlepng.png" alt="" />
+        <img class="size-[44px] border-2 border-[#7F7F7F] p-1 rounded-md" src="facebookpng.png" alt="" />
+      </div>
+    </form>
+    <p class="text-sm text-center">
+      don't have an account?
+      <button id="createAcBtn" class="underline"> Create an account</button>
+    </p>
+  </div>
+</div>
+<script>
+  const loginBtn = document.getElementById('loginBtn');
+  const createAccountBtn = document.getElementById('createAcBtn');
+  const loginPage = document.getElementById('login_page');
+  const signPage = document.getElementById('signup_page');
+  loginBtn.onclick = () => {
+    signPage.classList.add("hidden")
+    loginPage.classList.remove("hidden")
+  }
+  createAccountBtn.onclick = () => {
+    loginPage.classList.add("hidden")
+    signPage.classList.remove("hidden")
+  }
+</script>
+  </body>
+</html>

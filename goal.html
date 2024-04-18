@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+
+<body>
+<div class="bg-black h-screen flex justify-center items-center">    <div class="screeen bg-[#FCFCFC] w-[375px] h-[812px] rounded-[10px]">
+    <div class="navbar">
+        <nav class="text-sm px-5 w-inherit h-[44px] flex flex-row justify-between items-center font-semibold">
+            <div class="time">09:32</div>
+            <div class="left__status">
+                <span><i class="fa-solid fa-signal"></i></span>
+                <span><i class="fa-solid fa-wifi"></i></span>
+                <span><i class="fa-solid fa-battery-three-quarters"></i></span>
+            </div>
+        </nav>
+    </div>
+    <h2 class="m-6 text-xl font-semibold text-center">
+        What are your goals?
+    </h2>
+    <div class="main__container flex flex-col items-center gap-9 justify-center">
+        <form class="w-[375px] px-5 flex flex-col justify-center items-center gap-3">
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt1">Weight Loss</label>
+                <input class=" size-[20px]" type="checkbox" name="opt1" id="opt1" />
+            </div>
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt2">Muscle Gain</label>
+                <input class="tes size-[20px]" type="checkbox" name="opt2" id="opt2" />
+            </div>
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt3">Flexibility and Mobility</label>
+                <input class=" size-[20px]" type="checkbox" name="opt3" id="opt3" />
+            </div>
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt4">General Fitness</label>
+                <input class=" size-[20px]" type="checkbox" name="opt4" id="opt4" />
+            </div>
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt5">Event - specific training</label>
+                <input class=" size-[20px]" type="checkbox" name="opt5" id="opt5" />
+            </div>
+            <div id="check"
+                class="box bg-[#F1F1F1] w-full h-[50px] font-semibold text-xs flex justify-between items-center px-5 rounded-xl">
+                <label class="w-full py-[12px] text-xs font-semibold" onselectstart="return false" class="" for="opt6">Mindfulness and Mental Health</label>
+                <input class=" size-[20px]" type="checkbox" name="opt6" id="opt6" />
+            </div>
+
+            <a href="workout.html"
+                class="w-[343px] mb-2 text-center mt-32 p-[12px] rounded-xl text-white bg-gradient-to-l from-[#7B91FF] to-[#95BEFF]"><button
+                    type="button">Confirm</button></a>
+        </form>
+    </div>
+</div></div>
+</body>
+
+</html>
+
+<!-- <a href="" class="w-[343px] mb-2 text-center mt-32 p-[12px] rounded-xl text-white bg-gradient-to-l from-[#7B91FF] to-[#95BEFF] "><button type="submit">Create an Account</button></a> -->
