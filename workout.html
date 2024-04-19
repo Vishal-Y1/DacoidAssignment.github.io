@@ -30,12 +30,12 @@
         <h2 class="m-6 text-xl font-semibold"><span class="size-[20px] border px-1"><i
                     class="fa-solid fa-angle-left"></i></span>&nbsp;&nbsp;Workout Tracker</h2>
         <div class="main__container flex flex-col justify-center items-center gap-5">
-            <div class="w-[343px] h-[150px] bg-slate-950 flex justify-center ">
+            <div class="chart w-[373px] h-[150px] flex-1 px-1 ">
                 <canvas id="myChart"></canvas>
             </div>
 
             <div
-                class="notify w-[328px] h-[50px] mt-8 rounded-xl font-medium text-sm p-9 flex justify-center items-center bg-gradient-to-r from-[#7B91FF] to-[#95BEFF]">
+                class="notify w-[328px] h-[50px] mt-8 rounded-xl font-medium text-sm p-9 flex justify-center items-center bg-gradient-to-r from-[#7B91FF] to-[#95BEFF10]">
                 <h3><span><i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;</span>You've burned fewer
                     calories than yesterday. Time to get moving! </h3>
             </div>
@@ -71,7 +71,7 @@
         <div class=" flex flex-col items-center justify-center">
             <h5 class=" w-[343px] text-base font-semibold my-5">What Do You Want to Train</h5>
             <div
-                class="training w-[343px] flex  items-center justify-between p-5 h-[100px] bg-gradient-to-l from-[#8CB1FF] to-[#658fd3]">
+                class="training w-[343px] flex  items-center justify-between p-5 h-[100px] bg-gradient-to-l from-[#8CB1FF] to-[#658fd310]">
                 <div class="choice">
                     <p>Full Body Workout</p>
                     <p>Arms</p>
@@ -85,6 +85,72 @@
 
     </div>
 </div>
+
+<script>
+    // setup 
+    const data = {
+      labels: ['12:00', '6:00', '12:00', '6:00'],
+      datasets: [{
+        label: 'Good Job',
+        data: [900,500, 499,720,],
+        backgroundColor: [
+          'rgb(128, 153, 255)',
+          
+        ],
+        borderColor: [
+          
+        ],
+        borderWidth: 1,
+        barThickness: 8
+      },{label: 'skiped',
+        data: [0,10,10,10],
+        backgroundColor: [
+        'rgb(255, 0, 13)',
+        ],
+        borderColor: [
+          
+        ],
+        borderWidth: 1,
+        barThickness: 8
+    },{
+        label: 'less than 320cal',
+        data: [300,200, 220,120],
+        backgroundColor: [
+          'rgb(255, 92, 87)',
+          
+        ],
+        borderColor: [
+          
+        ],
+        borderWidth: 1,
+        barThickness: 8
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+
 </body>
 
 </html>
